@@ -25,7 +25,7 @@ def search_word_in_text(text, search_word):
         return 0
     
     # Case-insensitive search using word boundaries
-    pattern = r'\b' + re.escape(search_word.lower()) + r'\b'
+    pattern = re.escape(search_word.lower())
     matches = re.findall(pattern, text.lower())
     
     return len(matches)
